@@ -1,0 +1,40 @@
+# Seedream 配置文件
+
+# OpenAI API 配置
+openai:
+  api_key: "your-openai-api-key-here"
+  model: "gpt-4"
+  temperature: 0.7
+
+# 火山引擎 API 配置
+volcengine:
+  api_key: "your-volcengine-api-key-here"
+  endpoint: "https://ark.cn-beijing.volces.com"
+
+# 视频生成配置
+video:
+  default_width: 1920
+  default_height: 1080
+  default_fps: 30
+  default_duration: 60  # 默认视频长度（秒）
+  
+# 音频配置
+audio:
+  sample_rate: 44100
+  default_voice: "zh-CN-XiaoxiaoNeural"  # Edge TTS 语音
+  background_music_volume: 0.3
+
+# 素材生成配置
+assets:
+  image_resolution: "1024x1024"
+  video_search_limit: 5  # 搜索视频片段数量
+
+# 输出配置
+output:
+  default_output_dir: "./output"
+  temp_dir: "./temp"
+  
+# 日志配置
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

@@ -1,0 +1,28 @@
+# Seedream - AI 视频自动生成系统依赖
+
+# 核心依赖
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+requests>=2.31.0
+aiohttp>=3.9.0
+
+# AI/ML API
+openai>=1.6.0
+anthropic>=0.8.0
+
+# 视频/音频处理
+moviepy>=1.0.3
+ffmpeg-python>=0.2.0
+pydub>=0.25.1
+edge-tts>=6.1.10
+
+# 图片处理
+Pillow>=10.1.0
+
+# 数据和日志
+pandas>=2.1.0
+loguru>=0.7.0
+
+# 可选依赖（根据需求安装）
+# opencv-python>=4.8.0  # 高级视频处理
+# numpy>=1.24.0  # 已包含在以上依赖中

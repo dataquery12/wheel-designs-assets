@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #d4af37;
+  --color-silver: #e5e5e5;
+  --color-charcoal: #0a0a0a;
+  --color-obsidian: #000000;
+  --color-cyan: #00b4ff;
+  --color-electric: #0050ff;
+  --font-display: var(--font-cormorant);
+  --font-heading: var(--font-rajdhani);
+}
+
+:root {
+  --color-gold: #d4af37;
+  --color-silver: #e5e5e5;
+  --color-charcoal: #0a0a0a;
+  --color-black: #000000;
+  --color-cyan: #00b4ff;
+  --color-electric: #0050ff;
+  --glow-cyan: 0 0 20px rgba(0, 180, 255, 0.4), 0 0 60px rgba(0, 180, 255, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 180, 255, 0.4);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 180, 255, 0.7);
+}
+
+::selection {
+  background-color: rgba(0, 180, 255, 0.2);
+  color: #00b4ff;
+}
+
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.cyber-grid {
+  background-image:
+    linear-gradient(rgba(0, 180, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 180, 255, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glow-cyan {
+  box-shadow: var(--glow-cyan);
+}
